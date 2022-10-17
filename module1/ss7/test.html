@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+
+
+</head>
+<body>
+
+<input type="text" id="ho" >
+<input type="text" id="ten" >
+<button onclick = "call()" >Click me!</button>
+<span name="textname"></span><span name="textname"></span>
+</body>
+<script>
+    function call(){
+        let ho = document.getElementById("ho").value;
+        let ten = document.getElementById("ten").value;
+
+        let name = document.getElementsByName("textname");
+        name[0].innerText = ho;
+        name[1].innerText = ten;
+
+        // alert(name.length);
+    }
+
+</script>
+</html>

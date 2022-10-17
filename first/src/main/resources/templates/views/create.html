@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/create}" method="post" th:object="${house}" >
+    id <input type="text" th:field="*{id}">
+    name <input type="text" th:field="*{name}">
+    <p style="color:red;" th:errors="*{name}"></p>
+    address <input type="text" th:field="*{address}">
+    <p style="color:red;" th:errors="*{address}"></p>
+    date <input type="text" th:field="*{date}">
+    <button type="submit">sumit</button>
+</form>
+</body>
+</html>
