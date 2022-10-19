@@ -7,22 +7,33 @@
 
 </head>
 <body>
+<!--bai 1-->
+<h1>Tinh diem trung binh</h1>
+<p> Nhap diem ly </p>
+<input type="text" id="Physics" >
+<p> Nhap diem hoa </p>
+<input type="text" id="Chemistry" >
+<p> Nhap diem toan </p>
+<input type="text" id="Math">
+<button onclick = "call()" >Count!</button>
+<label> Diem trung binh = </label>
+<label id="average"></label>
+<!--bai 2-->
+<h2>Tinh diem trung binh</h2>
+<p> Nhap vao gia tri oC: </p>
+<input type="text" id="temperature">
+<button onclick="call2">Count</button>
 
-<input type="text" id="ho" >
-<input type="text" id="ten" >
-<button onclick = "call()" >Click me!</button>
-<span name="textname"></span><span name="textname"></span>
 </body>
 <script>
     function call(){
-        let ho = document.getElementById("ho").value;
-        let ten = document.getElementById("ten").value;
+        let phy = +document.getElementById("Physics").value;
+        let che = +document.getElementById("Chemistry").value;
+        let math = +document.getElementById("Math").value;
 
-        let name = document.getElementsByName("textname");
-        name[0].innerText = ho;
-        name[1].innerText = ten;
-
-        // alert(name.length);
+        var average = (phy + che + math) /3;
+        // alert(average)
+        document.getElementById("average").innerText = average;
     }
 
 </script>
