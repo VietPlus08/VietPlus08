@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Amount: </p>
+    <input type="text" id="number">
+    <p>From currency: </p>
+    <select name="" id="fromCur">
+        <option value="23000">Vietnamese</option>
+        <option value="1">USA</option>
+        <option value="7">China</option>
+        <option value="149">Japan</option>
+    </select>
+    <p>To currency: </p>
+    <select name="" id="toCur">
+        <option value="23000">Vietnamese</option>
+        <option value="1">USA</option>
+        <option value="7">China</option>
+        <option value="149">Japan</option>
+    </select><br><br>
+    <button type="submit" onclick="convert()">Convert</button>
+    <br>
+    <p id="cal"></p>
+</body>
+<script>
+    function convert() {
+        let number = +document.getElementById("number").value;
+        let fromCur = +document.getElementById("fromCur").value;
+        let toCur = +document.getElementById("toCur").value;
+        let convert = number * fromCur * toCur;
+        document.getElementById("cal").innerText = convert;
+
+    }
+
+</script>
+</html>

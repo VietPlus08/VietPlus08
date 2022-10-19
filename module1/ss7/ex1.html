@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+
+
+</head>
+<body>
+<!--bai 1-->
+<h2>Tinh diem trung binh</h2>
+<p> Nhap diem ly </p>
+<input type="text" id="Physics" >
+<p> Nhap diem hoa </p>
+<input type="text" id="Chemistry" >
+<p> Nhap diem toan </p>
+<input type="text" id="Math"><br>
+<button onclick = "call()" >Count!</button>
+<label> Diem trung binh = </label>
+<label id="average"></label>
+<!--bai 2-->
+<h2>CHuyen doi nhiet do</h2>
+<p> Nhap vao gia tri oC: </p>
+<input type="text" id="temperature"><br>
+<button onclick="call2()">Convert</button>
+<label >Chuyen doi sang oF = </label>
+<label id="convert"></label>
+<!--bai 3  -->
+<h2>Tinh dien tich, chu vi</h2>
+<p> Nhap vao gia tri ban kinh R: </p>
+<input type="text" id="radius"><br>
+<button onclick="call3()">Cal</button>
+<br>
+<label >Chu vi = </label>
+<label id="perimeter"></label><br>
+<label >Dien tich = </label>
+<label id="area"></label>
+</body>
+<script>
+    function call(){
+        let phy = +document.getElementById("Physics").value;
+        let che = +document.getElementById("Chemistry").value;
+        let math = +document.getElementById("Math").value;
+
+        var average = (phy + che + math) /3;
+        // alert(average)
+        document.getElementById("average").innerText = average;
+    }
+
+    function call2() {
+        let temp = +document.getElementById("temperature").value;
+        let convert = temp * 9 / 5 + 32;
+        // alert(convert);
+        document.getElementById("convert").innerText = convert;
+    }
+    function call3() {
+        let radius = +document.getElementById("radius").value;
+        let perimeter = radius * 2 * Math.PI;
+        let area = radius * radius * Math.PI;
+        document.getElementById("perimeter").innerText = perimeter;
+        document.getElementById("area").innerText = area;
+    }
+</script>
+</html>
