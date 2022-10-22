@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Calculator</h2>
+<table>
+  <tr>
+    <td colspan="2"><input type="number" id="firstNum" placeholder="input first number" value=""></td>
+    <td colspan="2"><input type="number" id="secondNum" placeholder="input second number" value=""></td>
+  </tr>
+  <tr>
+    <td><button type="submit" id="add" >Add (+)</button></td>
+    <td><button type="submit" id="sub">Sub (-)</button></td>
+    <td><button type="submit" id="mul">Multi (x)</button></td>
+    <td><button type="submit" id="div">Div (/)</button></td>
+  </tr>
+  <tr>
+    <td >Result:</td>
+    <td colspan="2"><p id="result"></td>
+    <td></td>
+  </tr>
+</table>
+</body>
+<script>
+    let add = document.getElementById("add");
+    let sub = document.getElementById("sub");
+    let mul = document.getElementById("mul");
+    let div = document.getElementById("div");
+    add.addEventListener("click", function (){
+      call(+document.getElementById("firstNum").value,
+            +document.getElementById("secondNum").value,"+")
+    });
+    sub.addEventListener("click", function (){
+      call(+document.getElementById("firstNum").value,
+              +document.getElementById("secondNum").value,"-")
+    });
+    mul.addEventListener("click", function (){
+      call(+document.getElementById("firstNum").value,
+              +document.getElementById("secondNum").value,"*")
+    });
+    div.addEventListener("click", function (){
+      call(+document.getElementById("firstNum").value,
+              +document.getElementById("secondNum").value,"/")
+    });
+    function call(a,b,c) {
+      switch (c) {
+        case "+":
+          document.getElementById("result").innerText = a + b; break;
+        case "-":
+          document.getElementById("result").innerText = a - b; break;
+        case "*":
+          document.getElementById("result").innerText = a * b; break;
+        case "/":
+          if (b!=0){
+            document.getElementById("result").innerText = a / b; break;
+          }
+          document.getElementById("result").innerText = " 2nd number is not zero"; break;
+      }
+    }
+
+
+</script>
+</html>

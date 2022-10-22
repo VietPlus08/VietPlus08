@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+
+    <tr>
+        <th>No</th>
+        <th>Gender ID</th>
+        <th>Gender name</th>
+    </tr>
+    <tr th:each="item,state: ${list}">
+        <td th:text="${state.count}"></td>
+        <td th:text="${item.id}"></td>
+        <td th:text="${item.name}"></td>
+        <td><a th:href="@{/find/{id}(id=${item.id})}"><button>Edit</button></a></td>
+    </tr>
+
+</table>
+</body>
+</html>
