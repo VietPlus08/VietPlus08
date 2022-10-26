@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="">Nhap vao e canh tam giac a, b, c: </label><br>
+    <input type="number" id="a"><br>
+    <input type="number" id="b"><br>
+    <input type="number" id="c"><br>
+    <button type="submit" id="submit">Submit</button>
+    <br>
+    <span>Ket qua: </span>
+    <span id="result"></span>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = +document.getElementById("c").value;
+        if (a + b > c && b + c > a && a + c > b){
+            document.getElementById("result").innerText = "la tam giac";
+        }else {
+            document.getElementById("result").innerText = "ko la tam giac";
+        }
+
+    })
+</script>
+</html>

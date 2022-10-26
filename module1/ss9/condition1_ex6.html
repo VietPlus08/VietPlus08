@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="">Nhap doanh so (1 USD --> 10000 USD): </label>
+    <input type="number" id="number1"><br>
+    <button type="submit" id="submit">Check</button>
+    <br>
+    <span>Hoa hong</span>
+    <span id="result"></span>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let number1 = +document.getElementById("number1").value;
+        if (isNaN(number1)){
+            document.getElementById("result").innerText = "phai la number";
+        } else {
+            check(number1);
+        }
+    })
+    function check(a) {
+        if (a >= 8000){
+            document.getElementById("result").innerText = "15%";
+        } else if (a >= 6000){
+            document.getElementById("result").innerText = "10%";
+        } else if (a >= 4000){
+            document.getElementById("result").innerText = "5%";
+        } else {
+            document.getElementById("result").innerText = "Khong dat";
+        }
+    }
+</script>
+
+</html>

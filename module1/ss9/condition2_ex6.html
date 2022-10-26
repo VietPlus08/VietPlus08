@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="">Nhap vao a, b, x (ax + b = 0) : </label><br>
+    <input type="number" id="num1" placeholder="a"><br>
+    <input type="number" id="num2" placeholder="b"><br>
+    <button type="submit" id="submit">Submit</button>
+    <br>
+    <span>Ket qua: </span>
+    <span id="result"></span>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let a = +document.getElementById("num1").value;
+        let b = +document.getElementById("num2").value;
+        if (a == 0 && b == 0){
+            document.getElementById("result").innerText = "VSN";
+        } else if (a == 0) {
+            document.getElementById("result").innerText = "VN";
+        } else {
+            document.getElementById("result").innerText = -b / a;
+        }
+    })
+</script>
+</html>

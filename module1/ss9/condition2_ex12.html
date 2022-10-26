@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="">Nhập số tiền vay (USD): </label>
+    <input type="number" id="a"><br>
+    <label for="">Nhập thời gian vay (tháng): </label>
+    <input type="number" id="b"><br>
+    <button type="submit" id="submit">Check</button>
+    <br>
+    <span>Lãi phải trả: </span>
+    <span id="result"></span>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        if (isNaN(a) || isNaN(b)){
+            document.getElementById("result").innerText = "Must is number";
+        } else {
+            document.getElementById("result").innerText = check(a,b) + " USD";
+            ;
+        }
+    })
+    function check(a,b) {
+        let tax = 0.01;
+        if (a >= 100000){
+            return a * b * tax;
+        } else if (a >= 10000){
+            return a * b * tax * 1.02;
+        }else if (a >= 5000){
+            return a * b * tax * 1.04;
+        }else {
+            return a * b * tax * 1.05;
+        }
+    }
+</script>
+</html>

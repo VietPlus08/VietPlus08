@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="">Nhap vao so nguyen: </label>
+    <input type="text" id="number">
+    <button type="submit" id="submit">Check</button>
+    <p id="result"></p>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let number = +document.getElementById("number").value;
+        if(number != Math.round(number)){
+            document.getElementById("result").innerText = "Phai nhap so nguyen";
+        } else if (number > 0){
+            document.getElementById("result").innerText = "So lon hon 0";
+        }else if (number < 0){
+            document.getElementById("result").innerText = "So nho hon 0";
+        } else {
+            document.getElementById("result").innerText = "So bang 0";
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>find date in month</title>
+</head>
+<body>
+<input type="text" id="month">
+<button type="submit" id="submit">Find date in month</button>
+<p id="result"></p>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let result;
+        switch (+document.getElementById("month").value) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                result = "31 ngay";break;
+            case 2:
+                result = "28 hoac 29 ngay"; break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                result = "30 ngay";break;
+            default:
+                result = "nhap sai"
+        }
+        document.getElementById("result").innerText= result;
+    })
+</script>
+</html>

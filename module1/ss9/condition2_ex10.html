@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="">Nhap so so dien (kw/h): </label>
+    <input type="number" id="a"><br>
+    <button type="submit" id="submit">Check</button>
+    <br>
+    <span>Cuoc phi</span>
+    <span id="result"></span>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let min = +document.getElementById("a").value;
+        if (isNaN(min)){
+            document.getElementById("result").innerText = "phai la number";
+        } else {
+            check(min);
+        }
+    })
+    function check(min) {
+        let tax = 0.1;
+        if (min >= 8000){
+            document.getElementById("result").innerText = min * tax * 0.5;
+        } else if (min >= 6000){
+            document.getElementById("result").innerText = min * tax * 0.7;
+        } else if (min >= 4000){
+            document.getElementById("result").innerText = min * tax * 0.9;
+        } else {
+            document.getElementById("result").innerText = min * tax;
+        }
+    }
+</script>
+</html>

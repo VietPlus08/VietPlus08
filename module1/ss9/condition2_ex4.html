@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="">Nhap vao do dai canh hinh chu nhat: </label><br>
+    <input type="number" id="num1"><br>
+    <input type="number" id="num2"><br>
+    <button type="submit" id="submit">Submit</button>
+    <br>
+    <span>Dien tich: </span>
+    <span id="result"></span>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let num1 = +document.getElementById("num1").value;
+        let num2 = +document.getElementById("num2").value;
+        if (isNaN(num1) || num1 < 0 || isNaN(num2) || num2 < 0){
+            document.getElementById("result").innerText = "Must a number and bigger than 0";
+        } else {
+            document.getElementById("result").innerText = num1 * num2;
+        }
+    })
+</script>
+</html>

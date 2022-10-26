@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check a % b</title>
+</head>
+<body>
+    <label for="">Nhap vao so chia: </label>
+    <input type="text" id="divisor">
+    <label for="">Nhap vao so bi chia: </label>
+    <input type="text" id="dividen">
+    <button type="submit" id="submit">Check</button>
+    <p id="result"></p>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let divisor = +document.getElementById("divisor").value;
+        let dividen = +document.getElementById("dividen").value;
+        if(dividen==0){
+            document.getElementById("result").innerText = "So bi chia phai khac 0";
+        } else if (divisor % dividen == 0){
+            document.getElementById("result").innerText = "Chia het";
+        } else {
+            document.getElementById("result").innerText = "Khong Chia het";
+        }
+    })
+
+</script>
+</html>

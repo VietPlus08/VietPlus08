@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="">Nhập số lương hàng tháng (USD): </label>
+    <input type="number" id="a"><br>
+    <button type="submit" id="submit">Check</button>
+    <br>
+    <span>Thuế TNCN: </span>
+    <span id="result"></span>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let a = +document.getElementById("a").value;
+        if (isNaN(a)){
+            document.getElementById("result").innerText = "Must is number";
+        } else {
+            document.getElementById("result").innerText = check(a) + " USD";
+        }
+    })
+    function check(a) {
+        let tax = 0.1;
+        if (a >= 10000){
+            return (a - 500) * tax * 2;
+        } else if (a >= 1000){
+            return (a - 500) * tax * 1.5;
+        }else if (a >= 500){
+            return (a - 500) * tax;
+        }else {
+            return 0;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="">Nhap vao diem kiem tra dau gio: </label>
+    <input type="text" id="number1"><br>
+    <label for="">Nhap vao diem kiem tra giua ki: </label>
+    <input type="text" id="number2"><br>
+    <label for="">Nhap vao diem kiem tra cuoi ki: </label>
+    <input type="text" id="number3"><br>
+    <button type="submit" id="submit">Check</button>
+    <br>
+    <p id="result"></p>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let number1 = +document.getElementById("number1").value;
+        let number2 = +document.getElementById("number2").value;
+        let number3 = +document.getElementById("number3").value;
+        let average = (number1 + number2 + number3) / 3;
+        if (average >= 8){
+            document.getElementById("result").innerText = "Gioi";
+        } else if (average >= 6.5){
+            document.getElementById("result").innerText = "Kha";
+        } else if (average >= 5){
+            document.getElementById("result").innerText = "Trung binh";
+        } else {
+            document.getElementById("result").innerText = "Yeu";
+        }
+    })
+</script>
+
+</html>

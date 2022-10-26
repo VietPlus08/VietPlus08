@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="">Nhap vao so tuoi (0-120) : </label><br>
+    <input type="number" id="a"><br>
+    <button type="submit" id="submit">Submit</button>
+    <br>
+    <span>Ket qua: </span>
+    <span id="result"></span>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let a = +document.getElementById("a").value;
+        if (isNaN(a) || a < 0 || a > 120){
+            document.getElementById("result").innerText = "phai la so nguyen tu 0 den 120";
+        }else {
+            document.getElementById("result").innerText = "ok"
+        }
+
+    })
+</script>
+</html>

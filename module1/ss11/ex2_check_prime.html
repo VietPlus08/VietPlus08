@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let number = +prompt("Nhap vao so so nguyen to can hien thi:");
+    if (number > 0 && !isNaN(number)){
+        let index = 2;
+        let count = 0;
+        while (number - count){
+            if (checkPrime(index)){
+                document.write(index +"<br>");
+                count++;
+            }
+            index++;
+        }
+    } else {
+        alert("Nhap dung so nguyen");
+    }
+
+    function checkPrime(n) {
+        let count = 0;
+        for (let i = 2; i < n; i++) {
+            if (n % i === 0){
+                count ++;
+            }
+        }
+        if (count){
+            // ko phai so nguyen to
+            return false;
+        } else {
+            // so nguyen to
+            return true;
+        }
+    }
+</script>
+</html>

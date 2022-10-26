@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="">Nhap vao tuoi: </label>
+    <input type="text" id="age">
+    <button type="submit" id="submit">Check</button>
+    <p id="result"></p>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let age = +document.getElementById("age").value;
+        if(age >= 15){
+            document.getElementById("result").innerText = "Be du tuoi hoc lop 10";
+        } else if (age >= 1){
+            document.getElementById("result").innerText = "Be chua du tuoi";
+        } else {
+            document.getElementById("result").innerText = "Be chua sinh ra";
+        }
+    })
+</script>
+
+</html>

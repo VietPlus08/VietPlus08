@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="">Nhap vao met (0 --> 100 ): </label>
+    <input type="number" id="num"><br>
+    <button type="submit" id="submit">Check</button>
+    <br>
+    <span>Doi sang feet</span>
+    <span id="result"></span>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let num = +document.getElementById("num").value;
+        if (isNaN(num)){
+            document.getElementById("result").innerText = "phai la number";
+        } else if (num > 0) {
+            document.getElementById("result").innerText = num * 3.2808;
+        }else {
+            document.getElementById("result").innerText = "phai > 0";
+        }
+    })
+</script>
+</html>

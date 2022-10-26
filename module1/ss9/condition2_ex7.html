@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="">Nhap vao a, b, c (ax2 + bx + c) : </label><br>
+    <input type="number" id="a"><br>
+    <input type="number" id="b"><br>
+    <input type="number" id="c"><br>
+    <button type="submit" id="submit">Submit</button>
+    <br>
+    <span>Ket qua: </span>
+    <span id="result"></span>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let a = +document.getElementById("a").value;
+        let b = +document.getElementById("b").value;
+        let c = +document.getElementById("c").value;
+        var delta = b * b - 4 * a * c;
+        if (delta < 0) {
+            document.getElementById("result").innerText = "PT vô nghiệm";
+        } else if (delta == 0) {
+            let x = -b / (2 * a);
+            document.getElementById("result").innerText = "PT có nghiệm kép :" +
+                "x1 = x2 = " + x;
+        } else {
+            let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            document.getElementById("result").innerHTML = "PT có 2 nghiệm kép : <br>"
+                + "x1 = " + x1
+                + "<br>"
+                + " x2 = " + x2;
+        }
+    })
+</script>
+</html>

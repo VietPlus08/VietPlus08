@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="">Nhap vao so nguyen 1: </label>
+    <input type="text" id="number1"><br>
+<!--    <p id="valid1"></p>-->
+    <label for="">Nhap vao so nguyen 2: </label>
+    <input type="text" id="number2"><br>
+<!--    <p id="valid2"></p>-->
+    <label for="">Nhap vao so nguyen 3: </label>
+    <input type="text" id="number3"><br>
+    <button type="submit" id="submit">Check</button>
+    <br>
+<!--    <p id="valid3"></p>-->
+    <p id="result"></p>
+</body>
+<script>
+    let submit = document.getElementById("submit");
+    submit.addEventListener("click",function () {
+        let number1 = +document.getElementById("number1").value;
+        let number2 = +document.getElementById("number2").value;
+        let number3 = +document.getElementById("number3").value;
+        if(number1 != Math.round(number1) || number2 != Math.round(number2) || number3 != Math.round(number3)){
+            document.getElementById("result").innerText = "Phai nhap so nguyen";
+        } else {
+            checkMax(number1,number2,number3);
+        }
+    })
+    function checkMax(a,b,c) {
+        let max;
+        if (a > b){
+            max = a;
+        }else {
+            max = b;
+        }
+        if (max > c){
+            document.getElementById("result").innerText = "So lon nhat:" + max;
+        } else {
+            document.getElementById("result").innerText = "So lon nhat:" + c;
+        }
+    }
+</script>
+
+</html>
