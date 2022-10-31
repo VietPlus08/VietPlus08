@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print array fibonacci</title>
+</head>
+<body>
+
+</body>
+<script>
+    let num = prompt("Nhập vào số số Fibonacci");
+    let count = 1;
+    while (num - count){
+        document.write(fibo(count) + "<br>");
+        count ++;
+    }
+    function fibo(x) {
+        if (x === 1 || x === 2){
+            return 1;
+        }
+        if (x >= 2)
+        return fibo(x - 1) + fibo(x - 2)
+    }
+</script>
+</html>

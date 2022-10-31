@@ -24,19 +24,12 @@
     }
 
     function checkPrime(n) {
-        let count = 0;
         for (let i = 2; i < n; i++) {
             if (n % i === 0){
-                count ++;
+                return false;
             }
         }
-        if (count){
-            // ko phai so nguyen to
-            return false;
-        } else {
-            // so nguyen to
             return true;
-        }
     }
 </script>
 </html>
