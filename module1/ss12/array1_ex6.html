@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>find the number in the array  </title>
+</head>
+<body>
+<p>Array Init: </p><span id="result1"></span><br>
+<span>Input the number</span>
+<input type="text" id="txtText">
+<button onclick="submit()">submit</button>
+<br>
+<span id="result2"></span>
+
+</body>
+<script>
+    let arrayNumber = [];
+    let result = 0;
+    let i = 0;
+    while (i < 10){
+        arrayNumber.push(Math.floor(Math.random()*20));
+        i++;
+    }
+    document.getElementById("result1").innerText = arrayNumber;
+    function submit() {
+        let num = +document.getElementById("txtText").value;
+        if (arrayNumber.indexOf(num) !== -1){
+            document.getElementById("result2").innerText = "Number is present in array";
+            return;
+        }
+            document.getElementById("result2").innerText = "Number is not present in array";
+    }
+</script>
+</html>

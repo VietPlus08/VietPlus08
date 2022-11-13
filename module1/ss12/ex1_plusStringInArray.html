@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>plus string in array</title>
+</head>
+<body>
+<!--bai 1-->
+<p>bai 1</p>
+<p id="result1"></p>
+<!--bai 2-->
+<br>
+<p>bai 2</p>
+<input type="text" id="txtText">
+<button onclick="submit()">submit</button>
+<span>Result: </span><span id="result2"></span>
+
+<!--bai 3-->
+<br>
+<p>bai 3</p>
+<input type="text" id="txtText3">
+<button onclick="submit3()">submit</button>
+<span>Result: </span><span id="result3"></span>
+
+</body>
+<script>
+
+    // bai 1
+    let str = ["red","white","blue","green"];
+    let plusString = str.toString();
+    document.getElementById("result1").innerText = plusString;
+    // bai 2
+    function submit(){
+        let num = document.getElementById("txtText").value;
+        const result2 = [num[0]];
+        for (let i = 0; i < num.length - 1 ; i++) {
+            if (num[i] % 2 === 0 && num[i+1] % 2 ===0){
+                result2.push('-',num[i+1]);
+                continue;
+            }
+            result2.push(num[i+1]);
+        }
+        document.getElementById("result2").innerText = result2.join(" ");
+    }
+    // bai 3
+    const UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    function submit3() {
+        let num = document.getElementById("txtText3").value;
+        let result3 = [];
+        for (let i = 0; i < num.length ; i++) {
+            if (UPPER.includes(num[i])){
+                result3.push(num[i].toLowerCase())
+                continue;
+            }
+            if (LOWER.includes(num[i])){
+                result3.push(num[i].toUpperCase())
+                continue;
+            }
+            result3.push(num[i]);
+        }
+        document.getElementById("result3").innerText = result3.join("");
+    }
+</script>
+</html>

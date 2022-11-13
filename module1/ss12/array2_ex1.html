@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Print element of Array[][]</title>
+</head>
+<body>
+<p id="result"></p>
+</body>
+<script>
+    let a = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [7, 4, 28, 14],
+        [3, 10, 26, 7]
+    ];
+    let result ="";
+    for ( var i in a){
+        result += "row" + i + "<br>";
+        for (var j in a[i]){
+            result += a[i][j] + "<br>";
+        }
+    }
+    document.getElementById("result").innerHTML = result;
+</script>
+</html>

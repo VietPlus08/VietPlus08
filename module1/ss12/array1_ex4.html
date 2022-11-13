@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show the biggest number in the array</title>
+</head>
+<body>
+<p>Result: </p>
+<p>Array Init: </p><span id="result1"></span>
+<p>Reserve array: </p><span id="result3"></span>
+
+</body>
+<script>
+    let arrayNumber = [];
+    let i = 0;
+    let number = prompt("Input number of element of array:");
+    while (i < number) {
+        let element = prompt("Input element (number) of array:")
+        arrayNumber.push(element);
+        i++;
+    }
+    document.getElementById("result1").innerText = arrayNumber;
+    document.getElementById("result3").innerText = arrayNumber.reverse();
+</script>
+</html>

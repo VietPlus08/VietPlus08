@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show all number bigger than 10 in the array</title>
+</head>
+<body>
+<!--<input type="text" id="txtText">-->
+<!--<button onclick="submit()">submit</button>-->
+<p>Result: </p>
+<p>Array Init: </p><span id="result1"></span>
+<p>Array has element bigger than 10: </p><span id="result2"></span>
+<p>Count: </p><span id="result3"></span>
+
+</body>
+<script>
+    let arrayNumber = [];
+    let result = [];
+    let count = 0;
+    let i = 0;
+    while (i < 10){
+        arrayNumber.push(Math.floor(Math.random()*20));
+        i++;
+    }
+    for (let j = 0; j < arrayNumber.length; j++) {
+        if (arrayNumber[j] >= 10){
+            result.push(arrayNumber[j]);
+            count ++;
+        }
+    }
+        document.getElementById("result1").innerText = arrayNumber;
+        document.getElementById("result2").innerText = result;
+        document.getElementById("result3").innerText = count;
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>show the biggest number and average of all numbers in the array  </title>
+</head>
+<body>
+<input type="text" id="txtText">
+<button onclick="submit()">submit</button><br>
+<span>Array Init: </span><span id="result1"></span><br>
+<span>Count: </span><span id="result2"></span>
+
+</body>
+<script>
+    const nguyenAm = "ueoai"
+    function submit(){
+        let arrayNumber = document.getElementById("txtText").value;
+        let i = 0;
+        let count = 0;
+        while (i < 10){
+            if (nguyenAm.includes(arrayNumber[i++])){
+                count++;
+            }
+        }
+        document.getElementById("result1").innerText = arrayNumber;
+        document.getElementById("result2").innerText = count;
+    }
+
+</script>
+</html>

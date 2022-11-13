@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert the elements of array from "-" to "_"</title>
+</head>
+<body>
+<span>Input the Initial array: </span>
+<input type="text" id="txtText1"><br>
+<button onclick="submit()">submit</button>
+<br>
+<span id="result1"></span><br>
+<span id="result2"></span><br>
+<span id="result3"></span><br>
+</body>
+<script>
+    function submit(){
+        let txtText1 = document.getElementById("txtText1").value;
+        let resultArray = [];
+        for (let i = 0; i < txtText1.length; i++) {
+            if (txtText1[i] === "-"){
+                resultArray.push("_");
+                continue;
+            }
+            resultArray.push(txtText1[i]);
+        }
+        document.getElementById("result1").innerText = "The convert array: " + resultArray;
+    }
+</script>
+</html>

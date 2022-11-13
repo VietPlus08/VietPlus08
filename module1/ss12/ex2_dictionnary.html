@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create dictionnary</title>
+</head>
+<body>
+<input type="text" id="txtText">
+<button onclick="submit()">submit</button>
+<span>Result: </span><span id="result"></span>
+
+</body>
+<script>
+    const englishWord = ["one","two","three","four","five","six","seven","eight","nine","ten"];
+    const vietWord = ["mot","hai","ba","bon","nam","sau","bay","tam","chin","muoi"];
+    let result;
+    function submit(){
+        let num = document.getElementById("txtText").value;
+        for (let i = 0; i < englishWord.length ; i++) {
+            if (num === englishWord[i]){
+                result = vietWord[i];
+                break;
+            }
+            result = "Can't translate";
+        }
+        document.getElementById("result").innerText = result;
+    }
+
+</script>
+</html>

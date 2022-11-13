@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reverse string</title>
+</head>
+<body>
+<span>Input the Initial String: </span>
+<input type="text" id="txtText">
+<button onclick="submit()">submit</button>
+<br>
+<span id="result"></span>
+</body>
+<script>
+    function submit(){
+        let txtText = document.getElementById("txtText").value;
+        let initArray = [];
+        for (let i = 0; i < txtText.length; i++) {
+            initArray.push(txtText[i]);
+        }
+        document.getElementById("result").innerText = initArray.reverse().join("");
+    }
+</script>
+</html>

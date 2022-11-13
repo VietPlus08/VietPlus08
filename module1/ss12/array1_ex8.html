@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> arrange array </title>
+</head>
+<body>
+<p>Array a: </p><span id="result1"></span><br>
+<p>Array b: </p><span id="result2"></span><br>
+<p>Array c: </p><span id="result3"></span>
+
+</body>
+<script>
+    let array1 = [];
+    let array2 = [];
+    let array3 = [];
+    let i = 0;
+    while (i < 10){
+        array1.push(Math.floor(Math.random()*20));
+        array2.push(Math.floor(Math.random()*20));
+        i++;
+    }
+    document.getElementById("result1").innerText = array1;
+    document.getElementById("result2").innerText = array2;
+    array3 = array1.concat(array2);
+    document.getElementById("result3").innerText = array3;
+</script>
+</html>
