@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>find area, square</title>
+</head>
+<body>
+<label for="number">Input the radius: </label>
+<input type="text" id="number">
+<button onclick="submit()">submit</button>
+<p id="result1"></p>
+<p id="result2"></p>
+
+</body>
+<script>
+    function submit() {
+        let num = +document.getElementById("number").value;
+        document.getElementById("result1").innerText = "area:" + area(num);
+        document.getElementById("result2").innerText = "square:" + square(num);
+    }
+
+    function area(num) {
+        return Math.PI * num * num;
+    }
+    function square(num) {
+        return Math.PI * 2 * num;
+    }
+</script>
+</html>

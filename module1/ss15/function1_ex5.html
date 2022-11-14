@@ -1,0 +1,23 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tim kiem chom sao </title>
+</head>
+<body>
+
+</body>
+<script>
+    let array1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let array2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function check(data) {
+        let index = array1.indexOf(data)
+        if (index){
+            return array2[index]
+        }
+        return "Not match"
+    }
+    let data = prompt("Input the star: ");
+    alert(check(data));
+</script>
+</html>

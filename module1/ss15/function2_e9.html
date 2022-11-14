@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check charater exist in the array</title>
+</head>
+<body>
+<label for="text1">Input the string  : </label>
+<input type="text" id="text1">
+<label for="text2">Input the character  : </label>
+<input type="text" id="text2">
+<button onclick="submit()">submit</button>
+<p id="result1"></p>
+<p id="result2"></p>
+
+</body>
+<script>
+    function submit() {
+        let text = document.getElementById("text1").value;
+        let character = document.getElementById("text2").value;
+        let textArray = [];
+        for (let i = 0; i < text.length; i++) {
+            textArray.push(text[i])
+        }
+        document.getElementById("result1").innerText = character + " has " + checkExist(textArray,character) + " times in " + text;
+    }
+    function checkExist(textArray,character) {
+        let count = 0;
+        for (let i = 0; i < textArray.length; i++) {
+            if (textArray[i] === character){
+                count ++;
+            }
+        }
+        if (count === 0){
+            return -1;
+        }
+        return count;
+    }
+</script>
+</html>

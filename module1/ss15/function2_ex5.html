@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>find min</title>
+</head>
+<body>
+<label for="number1">Input the number1: </label>
+<input type="text" id="number1">
+<label for="number2">Input the number2: </label>
+<input type="text" id="number2">
+<label for="number3">Input the number3: </label>
+<input type="text" id="number3">
+<button onclick="submit()">submit</button>
+<p id="result1"></p>
+<p id="result2"></p>
+
+</body>
+<script>
+    function submit() {
+        let num1 = +document.getElementById("number1").value;
+        let num2 = +document.getElementById("number2").value;
+        let num3 = +document.getElementById("number3").value;
+        document.getElementById("result1").innerText = "Find min:" + findMin(num1,num2,num3);
+    }
+    function findMin(num1,num2,num3) {
+        if (isNaN(num1) || isNaN(num2) || isNaN(num3)){
+            return "must be number"
+        }
+        if (num1 < num2 && num1 < num3){
+            return num1;
+        } else if (num2 < num1 && num2 < num3){
+            return num2;
+        }
+        return num3;
+    }
+
+</script>
+</html>

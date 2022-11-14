@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reverse the number</title>
+</head>
+<body>
+<label for="text1">Input the number  : </label>
+<input type="text" id="text1">
+<button onclick="submit()">submit</button>
+<p id="result1"></p>
+<p id="result2"></p>
+
+</body>
+<script>
+    function submit() {
+        let text = document.getElementById("text1").value;
+        let textArray = [];
+        for (let i = 0; i < text.length; i++) {
+            textArray.push(text[i])
+        }
+        document.getElementById("result1").innerText = "reverse:" + reverse(textArray);
+    }
+    function reverse(textArray) {
+        return textArray.reverse().join(" ");
+    }
+</script>
+</html>

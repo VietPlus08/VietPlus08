@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>find min</title>
+</head>
+<body>
+<label for="number1">Input the number1: </label>
+<input type="text" id="number1">
+<label for="number2">Input the number2: </label>
+<input type="text" id="number2">
+<button onclick="submit()">submit</button>
+<p id="result1"></p>
+<p id="result2"></p>
+
+</body>
+<script>
+    function submit() {
+        let num1 = +document.getElementById("number1").value;
+        let num2 = +document.getElementById("number2").value;
+        document.getElementById("result1").innerText = "After swap number 1 and number 2: " + swap(num1,num2);
+    }
+    function swap(num1,num2) {
+        let temp = [num2,num1];
+        return temp;
+    }
+
+</script>
+</html>

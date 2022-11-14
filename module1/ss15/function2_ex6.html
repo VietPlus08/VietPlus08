@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>check positive number</title>
+</head>
+<body>
+<label for="number">Input the number: </label>
+<input type="text" id="number">
+<button onclick="submit()">submit</button>
+<p id="result1"></p>
+<p id="result2"></p>
+
+</body>
+<script>
+    function submit() {
+        let num = document.getElementById("number").value;
+        document.getElementById("result1").innerText = num +" "+ checkNumber(num);
+    }
+    function checkNumber(num) {
+        if (isNaN(num) && num <= 0){
+            return "is negative number";
+        }
+        return "is positive number";
+    }
+
+</script>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert between meters and feet</title>
+</head>
+<body>
+<span>Nhap: </span>
+<input type="text" id="txtText"><br><br>
+<span>Chuyen doi tu: </span>
+<select name="" id="from">
+    <option value="feet">feet</option>
+    <option value="meter">meter</option>
+</select><br>
+<span>chuyen doi sang: </span>
+<select name="" id="to">
+    <option value="feet">feet</option>
+    <option value="meter">meter</option>
+</select><br>
+<button onclick="submit()">submit</button>
+<br>
+<span id="result1"></span><br>
+<span id="result2"></span><br>
+<span id="result3"></span><br>
+</body>
+<script>
+    function submit(){
+        let txtText = document.getElementById("txtText").value;
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        if (from === to){
+            document.getElementById("result1").innerText = "Chon don vi muon chuyen doi";
+        }else if (from === "feet"){
+            document.getElementById("result1").innerText = footToMeter(txtText);
+        }else {
+            document.getElementById("result1").innerText = metterToFoot(txtText);
+        }
+    }
+    function metterToFoot(txtText) {
+        return txtText * 0.305;
+    }
+    function footToMeter(txtText) {
+        return txtText / 0.305;
+    }
+</script>
+</html>
