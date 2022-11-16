@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>temperature object</title>
+</head>
+<body>
+<p id="tempf"></p>
+<p id="tempk"></p>
+</body>
+<script>
+    let Temperature = function (tempC) {
+        this.tempC = tempC;
+        this.convertFromTempCtoF = function(){
+            return tempC * 1.8 + 32;
+        }
+        this.convertFromTempCtoK = function(){
+            return tempC + 273;
+        }
+    }
+    function showTemp(tempC){
+        if (tempC > -273){
+            let temp = new Temperature(tempC);
+            document.getElementById("tempf").innerText = "Convert to temp F: " + temp.convertFromTempCtoF();
+            document.getElementById("tempk").innerText = "Convert to temp F: " + temp.convertFromTempCtoK();
+        }else {
+            document.getElementById("tempf").innerText = "temp must be > -273 oC";
+        }
+    }
+    showTemp(prompt("Input temp (oC)"));
+
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create retangle object</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500" style="border:1px solid #d3d3d3"></canvas>;
+<p id="area"></p>
+<p id="perimeter"></p>
+</body>
+<script>
+
+    let Rectangle = function (height, width) {
+        this.height = height;
+        this.width = width;
+
+        this.getArea = function () {
+            return height * width;
+        }
+        this.getPerimeter = function () {
+            return (height + width) * 2;
+        }
+        this.draw = function () {
+            var context = document.getElementById("myCanvas").getContext("2d");
+            context.beginPath(); // bat dau ve
+            context.fillStyle = "blue"; // fillstyle -> fillRect || rect -> fillstyle -> fill
+            context.fillRect(0,100,this.width,this.height);
+            context.stroke(); // hien thi
+        }
+    }
+    function showRectangle(height,width){
+        let rectangle = new Rectangle(height, width);
+        rectangle.draw();
+        document.getElementById("area").innerText = "Area: " + rectangle.getArea();
+        document.getElementById("perimeter").innerText = "Perimeter: " + rectangle.getPerimeter();
+    }
+    showRectangle(200,400);
+</script>
+</html>
