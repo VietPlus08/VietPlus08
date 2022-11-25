@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lamp and switch</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Lamp{
+        constructor() {
+        this.status = false;
+        }
+        turnOff(){
+            return this.status = false;
+        }
+
+        turnOn(){
+            return this.status = true;
+        }
+    }
+    class SwitchButton{
+        constructor() {
+            // this.lamp = lamp;
+        }
+        connectToLamp(lamp){
+            this.lamp = lamp;
+        }
+        switchOff(){
+            this.lamp.turnOff();
+            console.log("Lamp is turn off");
+        }
+        switchOn(){
+            this.lamp.turnOn();
+            console.log("Lamp is turn on");
+        }
+    }
+    let lamp = new Lamp();
+    let switchButton = new SwitchButton();
+    switchButton.connectToLamp(lamp);
+    console.log("before input loop");
+    // switchButton.switchOff();
+
+    function action() {
+        while (true){
+            let action = +prompt("Input: 1. switch off/ 2. switch on");
+            console.log(action);
+            if (action === 1){
+                alert("turn off");
+                switchButton.switchOff();
+            } else {
+                alert("turn on");
+                switchButton.switchOn();
+            }
+        }
+    }
+   action();
+
+</script>
+</html>

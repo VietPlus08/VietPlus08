@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>create class human and apple</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Apple {
+        constructor() {
+            this.weight = 10;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        decrease() {
+            return --this.weight;
+        }
+
+        isEmpty() {
+            if (this.weight === 0) {
+                return true;
+            }
+            return false;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender === 0) {
+                return "Female";
+            }
+            return "Male";
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        say() {
+            return this.name + " say: iam " + this.isMale() + " , my weight is " + this.getWeight();
+        }
+
+        eat(apple) {
+            apple.decrease();
+            return ++this.weight;
+        }
+
+        checkApple(apple) {
+            if (apple.getWeight() === 0) {
+                return false;
+            }
+            return true;
+        }
+    }
+
+    let apple = new Apple();
+    let human = new Human("Bé Đô", 1, "75");
+
+    while (human.checkApple(apple)) {
+        let action = +prompt("what do you want: (1. say / 2. eat apple, then say)");
+        if (action === 2) {
+            human.eat(apple);
+        }
+        alert(human.say());
+        alert("Apple is " + apple.getWeight());
+    }
+</script>
+</html>
