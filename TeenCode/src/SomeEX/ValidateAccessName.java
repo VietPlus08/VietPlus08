@@ -14,23 +14,17 @@ public class ValidateAccessName {
     }
     public static void ValidateAccName(String s){
         StringBuilder sb = new StringBuilder();
-//        s = s.trim();
-//        List<String> list = Arrays.asList(s.split("(\s)+"));
-//        for (String str: list){
-//            sb.append(" " + str.trim());
-//        }
-//        sb.deleteCharAt(0);
 
         Pattern pattern = Pattern.compile("(\\w+)");
         Matcher matcher = pattern.matcher(s);
-        while (matcher.find()){
-            if (sb.isEmpty()){
-                sb.append(upperFirstLetter(s.substring(matcher.start(), matcher.end())));
-                continue;
-            }
-            sb.append(" " + upperFirstLetter(s.substring(matcher.start(), matcher.end())));
-        }
-        System.out.println(sb);
+//        while (matcher.find()){
+//            if (sb.isEmpty()){
+//                sb.append(upperFirstLetter(s.substring(matcher.start(), matcher.end())));
+//                continue;
+//            }
+//            sb.append(" " + upperFirstLetter(s.substring(matcher.start(), matcher.end())));
+//        }
+//        System.out.println(sb);
     }
     public static String upperFirstLetter(String s){
         return s.substring(0,1).toUpperCase() + s.substring(1);

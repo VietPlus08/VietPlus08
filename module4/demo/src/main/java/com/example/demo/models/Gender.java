@@ -9,13 +9,16 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 @Entity
-@Table
+@Table (name = "gender")
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor
 public class Gender {
     @Id
-    int id;
-    @Column (name = "name" )
+    Integer id;
+
+    @Column(name = "name")
+    @NotBlank(message = "name not blank")
     String name;
 }

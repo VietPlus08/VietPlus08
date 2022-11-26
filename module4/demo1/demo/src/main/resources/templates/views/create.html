@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/update}" method="post" th:object="${gender}">
+    <label>Input ID</label>
+    <input type="number" th:field="*{id}" th:readonly="${gender.id != null}">
+<!--    neu create thi id = null thi duoc nhap-->
+<!--    neu edit thi id != null thi ko duoc nhap-->
+<!--    number cho mapping voi integer ben id-->
+    <label>Input name</label>
+    <input type="text" th:field="*{name}">
+    <button type="submit">submit</button>
+</form>
+</body>
+</html>

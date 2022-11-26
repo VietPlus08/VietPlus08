@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="eu">
-
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<form th:action="@{/update}" method="post" th:object="${gender}">
+    <label>Input ID</label>
+    <input type="text" th:field="*{id}" th:readonly="${gender.id!=null}">
 
+    <label>Input name</label>
+    <input type="text" th:field="*{name}">
+    <p style="color: red" th:errors="*{name}"></p>
+
+    <button type="submit">submit</button>
+</form>
 </body>
 </html>

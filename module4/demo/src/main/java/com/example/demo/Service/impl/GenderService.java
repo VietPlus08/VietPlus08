@@ -14,12 +14,22 @@ public class GenderService implements IGenderService {
     IGenderRepo genderRepo;
 
     @Override
-    public Gender findById(String id) {
+    public Gender findById(Integer id) {
         return genderRepo.findById(id).orElse(null);
     }
 
     @Override
     public List<Gender> findAll() {
         return genderRepo.findAll();
+    }
+
+    @Override
+    public void deleteById(Integer id) {
+        genderRepo.deleteById(id);
+    }
+
+    @Override
+    public void save(Gender gender) {
+        genderRepo.save(gender);
     }
 }

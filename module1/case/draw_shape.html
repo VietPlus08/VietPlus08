@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>draw</title>
+</head>
+<body>
+
+
+</body>
+<script>
+<!--    bai 1-->
+    for (let i = 0; i < 4; i++) {
+        for (let j = 0; j < 5; j++) {
+            if (i !== 0 && i !==3){
+                if (j !== 0 && j !== 4){
+                    document.write("&nbsp&nbsp");
+                    continue;
+                }
+            }
+            document.write("*");
+
+        }
+        document.write("<br>");
+    }
+<!--    bai 2-->
+    for (let i = 0; i < 4; i++) {
+        for (let j = 0; j < 5; j++) {
+            // if (i !== 0 && i !==3){
+            //     if (j !== 0 && j !== 4){
+            //         document.write("&nbsp&nbsp");
+            //         continue;
+            //     }
+            // }
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+
+</script>
+</html>

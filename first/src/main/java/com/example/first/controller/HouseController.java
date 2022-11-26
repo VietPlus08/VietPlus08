@@ -33,8 +33,6 @@ public class HouseController {
         return "/views/create";
     }
 
-
-
     @PostMapping("/create")
     public String create(@Valid @ModelAttribute("house") HouseHold houseHold, BindingResult bindingResult){
         if(bindingResult.hasErrors()){

@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7175f88-5ce9-4000-b55a-f03a562cc5f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TeenCode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../first/src/main/java/com/example/first/controller/HouseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../first/src/main/java/com/example/first/controller/HouseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/demo.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/demo/src/main/java/com/example/demo/Repo/IGenderRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/demo/src/main/java/com/example/demo/Repo/IGenderRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/demo/src/main/java/com/example/demo/Service/IGenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/demo/src/main/java/com/example/demo/Service/IGenderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/demo/src/main/java/com/example/demo/Service/impl/GenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/demo/src/main/java/com/example/demo/Service/impl/GenderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/demo/src/main/java/com/example/demo/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/demo/src/main/java/com/example/demo/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/demo/src/main/java/com/example/demo/models/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/demo/src/main/java/com/example/demo/models/Gender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/demo/src/main/resources/templates/views/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/demo/src/main/resources/templates/views/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/demo/src/main/resources/templates/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/demo/src/main/resources/templates/views/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +31,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,28 +44,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
-  }
-}</component>
-  <component name="RunManager" selected="Application.test">
-    <configuration name="LoginSolution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SomeEX.MVCLogin.LoginSolution" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Project/S20_case_bouncingBall.html" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Audit_Algorithm" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.SwapTwoNumber">
+    <configuration name="E262_find_frequency_of_char" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Audit_Algorithm.E262_find_frequency_of_char" />
       <module name="TeenCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SomeEX.MVCLogin.*" />
+          <option name="PATTERN" value="Audit_Algorithm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -70,12 +78,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P1_TwoSum.Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="P1_TwoSum.Solution" />
+    <configuration name="E265_convert_decimal_to_octal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Audit_Algorithm.E265_convert_decimal_to_octal" />
       <module name="TeenCode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="P1_TwoSum.*" />
+          <option name="PATTERN" value="Audit_Algorithm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E266_add_two_string_hhmmss" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Audit_Algorithm.E266_add_two_string_hhmmss" />
+      <module name="TeenCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Audit_Algorithm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E267_find_total_2_number_in_array" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Audit_Algorithm.E267_find_total_2_number_in_array" />
+      <module name="TeenCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Audit_Algorithm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,43 +130,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ValidateAccessName" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SomeEX.ValidateAccessName" />
-      <module name="TeenCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SomeEX.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SomeEX.test" />
-      <module name="TeenCode" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SomeEX.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.test" />
-        <item itemvalue="Application.LoginSolution" />
         <item itemvalue="Application.SwapTwoNumber" />
-        <item itemvalue="Application.ValidateAccessName" />
-        <item itemvalue="Application.P1_TwoSum.Solution" />
+        <item itemvalue="Application.E267_find_total_2_number_in_array" />
+        <item itemvalue="Application.E266_add_two_string_hhmmss" />
+        <item itemvalue="Application.E265_convert_decimal_to_octal" />
+        <item itemvalue="Application.E262_find_frequency_of_char" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e7175f88-5ce9-4000-b55a-f03a562cc5f4" name="Changes" comment="" />
@@ -155,11 +166,24 @@
       <workItem from="1662876974451" duration="272000" />
       <workItem from="1662878102843" duration="65000" />
       <workItem from="1662937609217" duration="692000" />
+      <workItem from="1667108473620" duration="293000" />
+      <workItem from="1667108922487" duration="927000" />
+      <workItem from="1667143767792" duration="106000" />
+      <workItem from="1667607605619" duration="1909000" />
+      <workItem from="1667635027808" duration="5037000" />
+      <workItem from="1667641962242" duration="5268000" />
+      <workItem from="1667824423626" duration="144000" />
+      <workItem from="1667825344999" duration="431000" />
+      <workItem from="1667989912374" duration="17000" />
+      <workItem from="1668170681672" duration="614000" />
+      <workItem from="1668309934169" duration="97000" />
+      <workItem from="1669376700777" duration="100000" />
+      <workItem from="1669427002842" duration="21000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -171,6 +195,57 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="105" key="FileChooserDialogImpl" timestamp="1669376719659">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1669376719659" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1668171305670">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1668171305670" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1668171305670">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1668171305670" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1668171305670">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1668171305670" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1668171305670">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1668171305670" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1667640299881">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1667640299881" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1667640299881">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1667640299881" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1667640299881">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1667640299881" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1667640299881">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1667640299881" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1667109632054">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1667109632054" />
+    <state x="65" y="0" key="new project wizard" timestamp="1667109853989">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1667109853989" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1667639731020">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1667639731020" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -190,18 +265,28 @@
           <line>8</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Audit_Algorithm/E265_convert_decimal_to_octal.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Audit_Algorithm/E265_convert_decimal_to_octal.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TeenCode$P7_Annagram_Solution.ic" NAME="P7_Annagram.Solution Coverage Results" MODIFIED="1658879324629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>P7_Annagram.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/TeenCode$Solution.ic" NAME="Solution Coverage Results" MODIFIED="1658867320742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>P4_BestTimeBuySellStock.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TeenCode$P5_Palindrome_Solution.ic" NAME="P5_Palindrome.Solution Coverage Results" MODIFIED="1658878328507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>P5_Palindrome.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/TeenCode$P7_Annagram_Solution.ic" NAME="P7_Annagram.Solution Coverage Results" MODIFIED="1658879324629" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>P7_Annagram.*</FILTER>
     </SUITE>
   </component>
 </project>

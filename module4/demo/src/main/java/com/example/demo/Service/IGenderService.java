@@ -5,8 +5,9 @@ import com.example.demo.models.Gender;
 import java.util.List;
 
 public interface IGenderService {
-    Gender findById(String id);
+
+    Gender findById(Integer id);
     List<Gender> findAll();
-
-
+    void deleteById(Integer id);
+    void save(Gender gender);
 }
