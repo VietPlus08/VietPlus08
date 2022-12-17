@@ -7,53 +7,62 @@ public class conver_number_to_string2 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Input the number: ");
         int number = scanner.nextInt();
-        String s = "";
-        int position = 1;
-        int previousNum = 0;
-        if (number == 0) {
-            s = "zero";
-        } else if (number < 1000) {
-            s = changeNumberToText_3Digit(number, previousNum, position);
-        } else if (number < 1000000) {
-            s = changeNumberToText_3Digit(number / 1000, previousNum, position) + " thousand "
-                    + changeNumberToText_3Digit(number % 1000, previousNum, position);
-        }else if (number < 1000000000){
-            s = changeNumberToText_3Digit(number / 1000000, previousNum, position) + " million "
-                    + changeNumberToText_3Digit(number / 1000, previousNum, position) + " thousand "
-                    + changeNumberToText_3Digit(number % 1000, previousNum, position);
-        }
-        System.out.println("Result: " + s);
+        System.out.println("Result: " + solve(number));
     }
 
-    public static String changeNumberToText_3Digit(int number, int previousNum, int position) {
+    // bài giải bắt đầu từ đây
+    public static String solve(int n) {
+        String s = "";
+        if (n == 0) {
+            s = "zero";
+        } else if (n < 1000) {
+            s = changeNumberToText_3Digit(n, "unit");
+        } else if (n < 1000000) {
+            s = changeNumberToText_3Digit(n / 1000, "thousand") + " "
+                    + changeNumberToText_3Digit(n % 1000, "unit");
+        } else if (n % 1000000 == 0) {
+            s = changeNumberToText_3Digit(n / 1000000, "million");
+        } else {
+            s = changeNumberToText_3Digit(n / 1000000, "million") + " "
+                    + changeNumberToText_3Digit(n / 1000 % 1000, "thousand") + " "
+                    + changeNumberToText_3Digit(n % 1000, "unit");
+        }
+        return s;
+    }
+
+    public static String changeNumberToText_3Digit(int number, String decimals) {
+        int position = 1;
+        int previousNum = 0;
         StringBuilder s = new StringBuilder();
         while (number != 0) {
-            String text = changeNumbertoText(number % 10, previousNum, position);
-            if (number == 100) {
-                s = new StringBuilder("one hundred");
+            String text = convertToText(number % 10, previousNum, position);
+            if (number % 100 == 0) {
+                s.insert(0, convertToText(number / 100, previousNum, position) + " hundred");
+                number = number / 100;
             } else if (position == 2 && number % 10 == 1) {
                 s = new StringBuilder(new String(text));
             } else {
                 if (!text.equals("")) {
-                    if (position != 1) s.insert(0," ");
-                    s.insert(0, text + positionDecimal(previousNum, position));
+                    if (position != 1) s.insert(0, " ");
+                    if (position == 3) {
+                        if (decimals.equals("unit")) s.insert(0, " hundred and");
+                        else s.insert(0, " hundred");
+                    }
+                    s.insert(0, text);
                 }
             }
             previousNum = number % 10;
             number = number / 10;
             position++;
         }
-        return new String(s);
+        if (decimals.equals("unit")) {
+            return new String(s);
+        } else {
+            return new String(s + " " + decimals);
+        }
     }
 
-    public static String positionDecimal(int preNum, int position) {
-        if (position == 3) return " hundred and";
-//        if (position == 4 && preNum == 0) return " thousand and";
-//        if (position == 4) return " thousand";
-        return "";
-    }
-
-    public static String changeNumbertoText(int num, int preNum, int pos) {
+    public static String convertToText(int num, int preNum, int pos) {
         if (pos == 2 && num == 1) {
             switch (preNum) {
                 case 0:
