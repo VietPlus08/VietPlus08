@@ -39,7 +39,7 @@ public class Point {
 
     @Override
     public String toString() {
-        return "Point2D{" +
+        return "Point{" +
                 "x=" + x +
                 ", y=" + y +
                 '}';

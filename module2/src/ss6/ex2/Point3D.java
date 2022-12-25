@@ -25,15 +25,15 @@ public class Point3D extends Point2D {
     }
 
     public float[] getXYZ() {
-        return new float[]{x, y, z};
+        return new float[]{super.getX(), super.getY(), z};
     }
 
     @Override
     public String toString() {
         return "Point3D{" +
                 "z=" + z +
-                ", x=" + x +
-                ", y=" + y +
+                ", x=" + super.getX() +
+                ", y=" + super.getY() +
                 '}';
     }
 }
