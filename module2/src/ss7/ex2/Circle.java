@@ -1,6 +1,8 @@
-package ss7.ex1;
+package ss7.ex2;
 
-public class Circle extends Shape implements Resizeable {
+import ss7.ex1.Resizeable;
+
+public class Circle extends Shape{
     private double radius = 1.0;
 
     public Circle() {
@@ -39,10 +41,8 @@ public class Circle extends Shape implements Resizeable {
                 + super.toString();
     }
 
-
     @Override
-    public void resize(double percent) {
-        setRadius((double)Math.round(percent * radius *100)/100);
-        System.out.println("After resize: " + toString());
+    public void howToColor() {
+        System.out.println("Color all four sides");
     }
 }

@@ -1,6 +1,8 @@
-package ss7.ex1;
+package ss7.ex2;
 
-public class Rectangle extends Shape implements Resizeable {
+import ss7.ex1.Resizeable;
+
+public class Rectangle extends Shape{
     private double width = 1.0;
     private double length = 1.0;
 
@@ -53,9 +55,7 @@ public class Rectangle extends Shape implements Resizeable {
     }
 
     @Override
-    public void resize(double percent) {
-        setLength((double) Math.round(percent * length * 100) / 100);
-        setWidth((double) Math.round(percent * width * 100) / 100);
-        System.out.println("After resize: " + toString());
+    public void howToColor() {
+        System.out.println("Color all four sides");
     }
 }
