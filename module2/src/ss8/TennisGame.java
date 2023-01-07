@@ -2,41 +2,28 @@ package ss8;
 
 public class TennisGame {
     public static String getScore(String player1Name, String player2Name, int firstPlayerScore, int secondPlayerScore) {
-        String score = "";
         int tempScore = 0;
         if (firstPlayerScore == secondPlayerScore) {
-            score = getScoreWhenSamePoint(firstPlayerScore);
-        } else if (cantWinGame(firstPlayerScore) || cantWinGame(secondPlayerScore)) {
-            score = getScoreWhenRoundHaveTheWinner(firstPlayerScore, secondPlayerScore);
-        } else {
-            for (int i = 1; i < 3; i++) {
-                if (i == 1) tempScore = firstPlayerScore;
-                else {
-                    score += "-";
-                    tempScore = secondPlayerScore;
-                }
-                score = getScore(score, tempScore);
-            }
+            return getScoreWhenSamePoint(firstPlayerScore);
         }
-        return score;
+        if (cantWinGame(firstPlayerScore) || cantWinGame(secondPlayerScore)) {
+            return getScoreWhenRoundHaveTheWinner(firstPlayerScore, secondPlayerScore);
+        }
+        return getScore(firstPlayerScore) + "-" + getScore(secondPlayerScore);
     }
 
-    private static String getScore(String score, int tempScore) {
-        switch (tempScore) {
+    private static String getScore(int score) {
+        switch (score) {
             case 0:
-                score += "Love";
-                break;
+                return "Love";
             case 1:
-                score += "Fifteen";
-                break;
+                return "Fifteen";
             case 2:
-                score += "Thirty";
-                break;
+                return "Thirty";
             case 3:
-                score += "Forty";
-                break;
+                return "Forty";
         }
-        return score;
+        return "";
     }
 
     private static String getScoreWhenRoundHaveTheWinner(int firstPlayerScore, int secondPlayerScore) {
@@ -71,7 +58,6 @@ public class TennisGame {
             default:
                 score = "Deuce";
                 break;
-
         }
         return score;
     }
