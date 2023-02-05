@@ -6,12 +6,11 @@ public class Test {
         linkedList.addLast(1);
         linkedList.addLast(2);
         linkedList.addLast(3);
-        linkedList.addLast(4);
-        linkedList.addLast(5);
         linkedList.addFirst(0);
-//        linkedList.add(3, 6);
+        linkedList.add(3, 6);
 //        linkedList.removeElement(5);
-//        linkedList.removeByIndex(5);
+        linkedList.showData();
+        System.out.println(linkedList.removeByIndex(3));;
         linkedList.showData();
     }
 }

@@ -2,7 +2,6 @@ package ss10.linkedlist;
 
 public class MyLinkedList<E> {
     private Node head;
-    Node lastNode;
     private int numNodes;
 
     public MyLinkedList() {
@@ -18,13 +17,13 @@ public class MyLinkedList<E> {
         Node node = new Node(data);
         if (head == null) {
             head = node;
-            return;
-        }
-        Node temp = head;
-        while (temp.next != null){
-            temp = temp.next;
+        } else {
+            Node temp = head;
+            while (temp.next != null) {
+                temp = temp.next;
             }
-        temp.next = node;
+            temp.next = node;
+        }
         numNodes++;
     }
 
@@ -36,89 +35,126 @@ public class MyLinkedList<E> {
             head = new Node(data);
             head.next = temp;
         }
-        this.numNodes++;
-    }
-
-    public void add(int index, E element) {
-        if (index <= 0) {
-            addFirst(element);
-            return;
-        }
-        if (index > this.numNodes - 1) {
-            addLast(element);
-            return;
-        }
-
-        Node curr = this.head;
-        index--;
-        while (index-- > 0) {
-            curr = curr.next;
-        }
-
-        if (curr == null) {
-            addLast(element);
-        } else {
-            Node node = new Node(element);
-            Node temp = curr.next;
-            curr.next = node;
-            node.next = temp;
-        }
         numNodes++;
     }
 
-    public void removeElement(E element) {
-        if (this.head == null) return;
-        Node fakeHead = new Node(new Object(), this.head);
-        Node prev = fakeHead;
-        Node curr = prev.next;
-        while (curr != null) {
-            if (curr.data == element) {
-                prev.next = curr.next;
-                curr = curr.next;
-            } else {
-                prev = curr;
-                curr = curr.next;
-            }
-            if (curr != null) this.lastNode = curr;
+    public void checkIndex(int index){
+        if (index < 0 || index > numNodes) {
+            throw new IndexOutOfBoundsException("Out of index: " + index);
         }
-
-        this.head = fakeHead.next;
     }
 
-    public void removeByIndex(int index) {
-        if (this.head == null) return;
-        if (index > this.numNodes - 1 || index < 0) return;
-
-        Node fakeHead = new Node(new Object(), this.head);
-        Node prev = fakeHead;
-        Node curr = prev.next;
-
-        while (index-- > 0) {
-            prev = curr;
+    public void add(int index, E element) {
+        checkIndex(index);
+        if (index == 0) {
+            addFirst(element);
+            return;
+        }
+        if (index == numNodes) {
+            addLast(element);
+            return;
+        }
+        Node curr = head;
+        while (--index != 0) {
             curr = curr.next;
         }
-
-        prev.next = curr.next;
-
-        this.head = fakeHead.next;
+        Node node = new Node(element);
+        Node temp = curr.next;
+        curr.next = node;
+        node.next = temp;
+        numNodes++;
     }
 
-    public int indexOf(E element) {
-        if (this.head == null) return 0;
-        int result = 0;
-        Node head = this.head;
-        while (head != null) {
-            if (head.data == element) break;
-            result++;
+    public boolean removeElement(E element) {
+        if (head == null) return false;
+        if (head.data == element) {
             head = head.next;
+            numNodes--;
+            return true;
         }
-        return result;
+        Node prevNode = head;
+        Node curNode = head.next;
+        while (curNode != null) {
+            if (curNode.data == element) {
+                prevNode.next = curNode.next;
+                numNodes--;
+                return true;
+            }
+            prevNode = curNode;
+            curNode = curNode.next;
+        }
+        return false;
+    }
+
+    public E removeByIndex(int index) {
+        checkIndex(index);
+        if (head == null) return null;
+
+        Node prevNode = head;
+        Node curNode = head.next;
+        if (index == 0) {
+            head = head.next;
+            numNodes--;
+            return (E) prevNode;
+        }
+        while (--index != 0) {
+            prevNode = curNode;
+            curNode = curNode.next;
+        }
+        prevNode.next = curNode.next;
+        numNodes--;
+        return (E) curNode;
+    }
+
+    public boolean contains(E e){
+        Node temp = head;
+        while (temp != null) {
+            if (temp.data == e) {
+                return true;
+            }
+            temp = temp.next;
+        }
+        return false;
+    }
+    public E get(int index){
+        checkIndex(index);
+        Node temp = head;
+        while (index-- != 0) {
+            temp = temp.next;
+        }
+        return (E) temp;
+    }
+
+    public int indexOf(E e) {
+        int result = 0;
+        if (head == null) return -1;
+        Node temp = head;
+        while (temp != null) {
+            if (temp.data == e) return result;
+            result++;
+            temp = temp.next;
+        }
+        return -1;
+    }
+
+    public void clear(){
+        head = null;
+    }
+    public int size(){
+        return numNodes;
+    }
+
+    public E clone(){
+        return (E) head;
     }
 
     public void showData() {
-        while (head != null) {
-            System.out.println(head.data);
-            head = head.next;
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data);
+            temp = temp.next;
+            String split = temp != null? "," : "\n";
+            System.out.print(split);
         }
     }
 }
