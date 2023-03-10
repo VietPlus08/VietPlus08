@@ -1,5 +1,5 @@
 create database bai_tap_1;
-use bait_tap_1;
+use bai_tap_1;
 create table class(
 	id_class int primary key,
     name varchar(50) not null
