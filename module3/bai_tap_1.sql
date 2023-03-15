@@ -2,7 +2,7 @@ create database bai_tap_1;
 use bai_tap_1;
 create table class(
 	id_class int primary key auto_increment,
-    name varchar(50) not null
+    name char(50) not null
 );
 
 create table student(
