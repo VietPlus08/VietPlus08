@@ -45,7 +45,7 @@ create table don_dh(
 	so_dh int primary key,
     ngay_dh date,
 	ma_ncc int,
-	foreign key (ma_ncc) references nha_cung_cap(ma_ncc)
+	foreign key (ma_ncc) references nha_cung_cap(ma_ncc)student
 );	
 create table don_dh_vat_tu(
 	so_dh int,
