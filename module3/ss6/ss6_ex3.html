@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đọc truyện tranh Online</title>
+</head>
+
+<style>
+    .container {
+        display: grid;
+        grid-template-areas:
+                'header header header header header header'
+                'menu menu menu menu menu menu'
+                'left left content content right right'
+    ;
+    }
+
+    .header {
+        border: 1px solid #ffffff;
+        font-size: 15px;
+    }
+
+    .left , .right {
+        background-color: #333333;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .menu {
+        grid-area: menu;
+    }
+
+    .content {
+        grid-area: content;
+    }
+
+    .left {
+        grid-area: left;
+    }
+
+    .right {
+        grid-area: right;
+    }
+
+    .header {
+        text-align: center;
+        background-color: blueviolet;
+        height: 60px;
+    }
+
+    #search {
+        width: 300px;
+        height: 25px;
+    }
+    #blank {
+        width: 75px;
+        display: inline-block;
+    }
+
+    #logo {
+        position: relative;
+        top: 10px;
+    }
+
+    .searchbutton {
+        background: url("https://st.nettruyenvt.com/Data/Sites/1/skins/comic/images/btn_search.png");
+        background-color: white;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        top: 10px;
+    }
+
+    a {
+        cursor: pointer;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    #menu > li{
+        display: block;
+        position: relative;
+        border-right: solid 1px #ddd;
+        float: left;
+        height: 10px;
+    }
+
+    #menu {
+        content: " ";
+        display: table;
+    }
+
+    #menu > li > a {
+        padding: 0 10px;
+        line-height: 10px;
+    }
+
+    #menu > li > a {
+        color: #333;
+        white-space: nowrap;
+        padding: 15px 30px;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    li {
+        padding: 0 0 10px;
+        text-align: -webkit-match-parent;
+    }
+
+    .menu {
+        background-color: #e4e4e4;
+    }
+
+    .recommend {
+        padding: 10px 0px 0px;
+        color: blue;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+
+    figure {
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 40px;
+        margin-inline-end: 40px;
+        width: 200px;
+    }
+
+    .item {
+        padding: 0px 50px;
+        display: block;
+        width: 150px;
+        float: left;
+    }
+
+    .content {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .content {
+        background-color: blanchedalmond;
+    }
+
+    .left > img {
+        height: 1000px;
+        width : 250px;
+        float: left;
+    }
+
+    .right > img {
+        height: 1000px;
+        width : 250px;
+        float: right;
+    }
+
+    .menu {
+        position: sticky;
+    }
+</style>
+
+<body>
+<div class="container">
+    <div class="header">
+        <a href="https://www.nettruyenvt.com/">
+            <img src="https://st.nettruyenvt.com/data/logos/logo-nettruyen.png" alt="Logo NetTruyen" id="logo">
+        </a>
+
+        <p id="blank">
+
+        </p>
+
+        <input type="text" placeholder="Tìm truyện..." id="search">
+
+        <input type="submit" value class="searchbutton">
+
+        <input type="button" value="Đăng ký">
+
+        <input type="button" value="Đăng Nhập">
+    </div>
+
+    <div class="menu">
+        <ul style="list-style: none" id="menu">
+
+            <li>
+                <a target="_self" href="">Trang Chủ</a>
+            </li>
+
+            <li>
+                <a target="_self" href="">Hot</a>
+            </li>
+
+            <li>
+                <a target="_self" href="">Theo dõi</a>
+            </li>
+
+            <li>
+                <a target="_self" href="">Lịch sử</a>
+            </li>
+
+            <li>
+                <a target="_self" href="">Thể loại</a>
+            </li>
+
+            <li>
+                <a target="_self" href="">Xếp hạng</a>
+            </li>
+
+            <li>
+                <a target="_self" href="">Tìm truyện</a>
+            </li>
+
+            <li>
+                <a target="_self" href="">Con trai</a>
+            </li>
+
+            <li>
+                <a target="_self" href="">Con gái</a>
+            </li>
+
+            <li>
+                <a target="_self" href="">Tải App</a>
+            </li>
+
+            <li>
+                <a target="_self" href="">Group</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="left">
+        <img src="	https://bet88.men/wp-content/uploads/2023/01/bet88-5.jpg"  alt="ảnh">
+    </div>
+
+    <div class="content">
+        <div>
+            <div class="recommend">
+                Truyện đề cử>
+            </div>
+
+            <div class="item">
+                <figure class="clearfix">
+                    <div class="image">
+                        <a href="https://www.nettruyenvt.com/truyen-tranh/su-tro-lai-cua-nguoi-choi-bi-dong-bang-384668" target="_blank">
+                            <img src="https://st.nettruyenvt.com/data/comics/64/su-tro-lai-cua-nguoi-choi-bi-dong-bang.jpg" alt="Error">
+                        </a>
+                    </div>
+
+                    <figcaption>
+                        <h3>
+                            <a href="">
+                                Sự Trở Lại Của Người Chơi Bị Đóng Băng
+                            </a>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="item">
+                <figure class="clearfix">
+                    <div class="image">
+                        <a href="https://www.nettruyenvt.com/truyen-tranh/shuumatsu-no-valkyrie-207270" target="_blank">
+                            <img src="https://st.nettruyenvt.com/data/comics/247/shuumatsu-no-valkyrie.jpg" height="247px" alt="Error">
+                        </a>
+                    </div>
+
+                    <figcaption>
+                        <h3>
+                            <a href="" target="_blank">
+                                Shuumatsu no Valkyrie
+                            </a>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="item">
+                <figure class="clearfix">
+                    <div class="image">
+                        <a href="https://www.nettruyenvt.com/truyen-tranh/chainsaw-man-tho-san-quy-202651" target="_blank">
+                            <img src="https://st.nettruyenvt.com/data/comics/41/chainsaw-man-tho-san-quy.jpg" height="247px" alt="Error">
+                        </a>
+                    </div>
+
+                    <figcaption>
+                        <h3>
+                            <a href="">
+                                Chainsaw man - Thợ Săn Quỷ
+                            </a>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div>
+            <div class="recommend">
+                Truyện đề cử>
+            </div>
+
+            <div class="item">
+                <figure class="clearfix">
+                    <div class="image">
+                        <a href="https://www.nettruyenvt.com/truyen-tranh/su-tro-lai-cua-nguoi-choi-bi-dong-bang-384668" target="_blank">
+                            <img src="https://st.nettruyenvt.com/data/comics/64/su-tro-lai-cua-nguoi-choi-bi-dong-bang.jpg" alt="Error">
+                        </a>
+                    </div>
+
+                    <figcaption>
+                        <h3>
+                            <a href="">
+                                Sự Trở Lại Của Người Chơi Bị Đóng Băng
+                            </a>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="item">
+                <figure class="clearfix">
+                    <div class="image">
+                        <a href="https://www.nettruyenvt.com/truyen-tranh/shuumatsu-no-valkyrie-207270" target="_blank">
+                            <img src="https://st.nettruyenvt.com/data/comics/247/shuumatsu-no-valkyrie.jpg" height="247px" alt="Error">
+                        </a>
+                    </div>
+
+                    <figcaption>
+                        <h3>
+                            <a href="" target="_blank">
+                                Shuumatsu no Valkyrie
+                            </a>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="item">
+                <figure class="clearfix">
+                    <div class="image">
+                        <a href="https://www.nettruyenvt.com/truyen-tranh/chainsaw-man-tho-san-quy-202651" target="_blank">
+                            <img src="https://st.nettruyenvt.com/data/comics/41/chainsaw-man-tho-san-quy.jpg" height="247px" alt="Error">
+                        </a>
+                    </div>
+
+                    <figcaption>
+                        <h3>
+                            <a href="">
+                                Chainsaw man - Thợ Săn Quỷ
+                            </a>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div>
+            <div class="recommend">
+                Truyện đề cử>
+            </div>
+
+            <div class="item">
+                <figure class="clearfix">
+                    <div class="image">
+                        <a href="https://www.nettruyenvt.com/truyen-tranh/su-tro-lai-cua-nguoi-choi-bi-dong-bang-384668" target="_blank">
+                            <img src="https://st.nettruyenvt.com/data/comics/64/su-tro-lai-cua-nguoi-choi-bi-dong-bang.jpg" alt="Error">
+                        </a>
+                    </div>
+
+                    <figcaption>
+                        <h3>
+                            <a href="">
+                                Sự Trở Lại Của Người Chơi Bị Đóng Băng
+                            </a>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="item">
+                <figure class="clearfix">
+                    <div class="image">
+                        <a href="https://www.nettruyenvt.com/truyen-tranh/shuumatsu-no-valkyrie-207270" target="_blank">
+                            <img src="https://st.nettruyenvt.com/data/comics/247/shuumatsu-no-valkyrie.jpg" height="247px" alt="Error">
+                        </a>
+                    </div>
+
+                    <figcaption>
+                        <h3>
+                            <a href="" target="_blank">
+                                Shuumatsu no Valkyrie
+                            </a>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="item">
+                <figure class="clearfix">
+                    <div class="image">
+                        <a href="https://www.nettruyenvt.com/truyen-tranh/chainsaw-man-tho-san-quy-202651" target="_blank">
+                            <img src="https://st.nettruyenvt.com/data/comics/41/chainsaw-man-tho-san-quy.jpg" height="247px" alt="Error">
+                        </a>
+                    </div>
+
+                    <figcaption>
+                        <h3>
+                            <a href="">
+                                Chainsaw man - Thợ Săn Quỷ
+                            </a>
+                        </h3>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <div class="right">
+        <img src="	https://bet88.men/wp-content/uploads/2023/01/bet88-5.jpg"  alt="ảnh">
+    </div>
+</div>
+</body>
+</html>
