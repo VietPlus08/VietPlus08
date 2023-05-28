@@ -37,7 +37,7 @@ public class House {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "house")
     private Set<Person> personSet;
 
-    public House(HouseDao houseDao){
+    public House(HouseDao houseDao) {
         id = houseDao.getId();
         name = houseDao.getName();
         date = houseDao.getDate();

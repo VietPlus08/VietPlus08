@@ -7,8 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IPersonRepo extends JpaRepository<Person,Integer> {
+public interface IPersonRepo extends JpaRepository<Person, Integer> {
 
-    @Query (value = "select count(*) from person where house_id = ?1", nativeQuery = true)
+    @Query(value = "select count(*) from person where house_id = ?1", nativeQuery = true)
     Integer countByHouseId(Integer houseId);
 }

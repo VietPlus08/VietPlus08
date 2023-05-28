@@ -16,7 +16,7 @@ public interface IActionRepository extends JpaRepository<Action, Long> {
 
     @Modifying
     @Query(value = "insert into action (title,content,time_finish) values (?1, ?2, ?3)", nativeQuery = true)
-    void save(String title, String content,Timestamp time);
+    void save(String title, String content, Timestamp time);
 
     @Query(value = "select * from action where DATEDIFF(time_begin, now()) < 1", nativeQuery = true)
     List<Action> findAll();

@@ -22,7 +22,7 @@ public class HouseDao {
 
     private Date date;
 
-    public HouseDao(House house){
+    public HouseDao(House house) {
         id = house.getId();
         name = house.getName();
         date = house.getDate();

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="eu">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" action="/create" th:object="${person}">
+    <fieldset>
+        <legend>
+            Hospital Form
+        </legend>
+        <table>
+            <tr>
+                <td>Name (*)</td>
+                <td>
+                    <label>
+                        <input type="text" th:field="*{fullName}">
+                    </label>
+                    <p th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Year Born (*)</td>
+                <td>
+                    <label>
+                        <input type="number" th:field="*{yearBorn}">
+                    </label>
+                    <p th:if="${#fields.hasErrors('yearBorn')}" th:errors="*{yearBorn}"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender (*)</td>
+                <td>
+                    <label>
+                        <select th:field="*{gender}">
+                            <option th:each="item: ${listGender}"
+                                    th:value="${item}" th:text="${item}"></option>
+                        </select>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Nation (*)</td>
+                <td>
+                    <label>
+                        <select th:field="*{nation}">
+                            <option th:each="item: ${listNation}"
+                                    th:value="${item}" th:text="${item}"></option>
+                        </select>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Id card (*)
+                </td>
+                <td>
+                    <label>
+                        <input type="text" th:field="*{passportNumber}">
+                    </label>
+                    <p th:if="${#fields.hasErrors('passportNumber')}" th:errors="*{passportNumber}"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Vehicle (*)</td>
+                <td>
+                    <label>
+                        <input type="radio" th:field="*{vehicle}" th:each="item: ${listVehicle}" th:value="${item}"
+                               th:text="${item}">
+                    </label>
+                    <p th:if="${#fields.hasErrors('vehicle')}" th:errors="*{vehicle}"></p>
+
+                </td>
+            </tr>
+            <tr>
+                <td>Number Plate</td>
+                <td>
+                    <label>
+                        <input type="text" th:field="*{numberVehicle}">
+                    </label>
+                    <p th:if="${#fields.hasErrors('numberVehicle')}" th:errors="*{numberVehicle}"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Day Begin (*)</td>
+                <td>
+                    <label>
+                        <input type="date" th:field="*{dateBegin}">
+                    </label>
+                    <p th:if="${#fields.hasErrors('dateBegin')}" th:errors="*{dateBegin}"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Day end (*)</td>
+                <td>
+                    <label>
+                        <input type="date" th:field="*{dateEnd}">
+                    </label>
+                    <p th:if="${#fields.hasErrors('dateEnd')}" th:errors="*{dateEnd}"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>City (*)</td>
+                <td>
+                    <label>
+                        <select th:field="*{city}">
+                            <option th:each="item: ${listCity}"
+                                    th:value="${item}" th:text="${item}"></option>
+                        </select>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>District (*)</td>
+                <td>
+                    <label>
+                        <select th:field="*{district}">
+                            <option th:each="item: ${listDistrict}"
+                                    th:value="${item}" th:text="${item}"></option>
+                        </select>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Sub District (*)</td>
+                <td>
+                    <label>
+                        <select th:field="*{subDistrict}">
+                            <option th:each="item: ${listSubDistrict}"
+                                    th:value="${item}" th:text="${item}"></option>
+                        </select>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Phone (*)</td>
+                <td>
+                    <label>
+                        <input type="text" th:field="*{phone}">
+                    </label>
+                    <p th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <label>
+                        <input type="text" th:field="*{email}">
+                    </label>
+                    <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Address (*)</td>
+                <td>
+                    <label>
+                        <input type="text" th:field="*{address}">
+                    </label>
+                    <p th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Covid</td>
+                <td>
+                    <label>
+                        <input type="checkbox" th:field="*{covid}"><span> have covid 1 times</span>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Submit</button>
+                </td>
+                <td>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+</body>
+</html>

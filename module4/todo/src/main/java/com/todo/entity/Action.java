@@ -20,10 +20,10 @@ public class Action implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "time_begin",columnDefinition = "DATETIME DEFAULT CURRENT_TIMESTAMP")
+    @Column(name = "time_begin", columnDefinition = "DATETIME DEFAULT CURRENT_TIMESTAMP")
     private Timestamp timeBegin;
 
-    @Column(name = "time_finish",columnDefinition = "DATETIME")
+    @Column(name = "time_finish", columnDefinition = "DATETIME")
     private Timestamp timeFinish;
 
     String title;
@@ -31,7 +31,7 @@ public class Action implements Serializable {
 
     String content;
 
-    @Column(name = "status",columnDefinition = "VARCHAR(50) DEFAULT 'incomplete'")
+    @Column(name = "status", columnDefinition = "VARCHAR(50) DEFAULT 'incomplete'")
     String status;
 
 

@@ -23,7 +23,7 @@ function saveNewAction() {
             document.getElementById("title").value = "";
             drawTableFromResponseJson(JSON.stringify(response))
         })
-        .catch( error => alert("title content should be something!!!"))
+        .catch(error => alert("title content should be something!!!"))
 }
 
 function drawTableFromResponseJson(str) {

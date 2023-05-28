@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myDataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+       <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+        <property name="url"
+                  value="jdbc:sqlserver://localhost;database=baithimodule2_1;Encrypt=True;TrustServerCertificate=True;"/>
+        <property name="username" value="sa"/>
+        <property name="password" value="codegym@123"/>
+    </bean>
+
+    <bean id="mySessionFactory"
+          class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="myDataSource"/>
+        <property name="annotatedClasses">
+            <list>
+                <value>com.java.entities.Order</value>
+                <value>com.java.entities.Type</value>
+            </list>
+        </property>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>
+<!--                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</prop>-->
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.generate-ddl">true</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.ddl-auto">update</prop>
+                <prop key="hibernate.hb2dll.auto">update</prop>
+                <prop key="hibernate.SQL">DEBUG</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

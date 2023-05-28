@@ -19,7 +19,6 @@ public class ActionServiceImpl implements IActionService {
     IActionRepository repository;
 
 
-
     @Override
     public void save(ActionDAO actionDAO) {
         repository.save(actionDAO.getTitle(), actionDAO.getContent(), Timestamp.valueOf(LocalDateTime.now()));

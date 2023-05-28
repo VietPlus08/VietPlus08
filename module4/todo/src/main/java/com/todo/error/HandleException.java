@@ -23,9 +23,9 @@ public class HandleException implements ErrorController {
 
     @ExceptionHandler(NotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public Map<String,String> notFoundHandle(NotFoundException e){
+    public Map<String, String> notFoundHandle(NotFoundException e) {
         Map<String, String> map = new HashMap<>();
-        map.put("error message ",e.getMessage() );
+        map.put("error message ", e.getMessage());
         return map;
     }
 }

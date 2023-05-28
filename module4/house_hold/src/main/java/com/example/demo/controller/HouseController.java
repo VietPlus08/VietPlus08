@@ -17,38 +17,35 @@ public class HouseController {
     IHouseService service;
 
     @GetMapping(" ")
-    public String goList(Model model){
+    public String goList(Model model) {
         model.addAttribute("list", service.findAllHouseDto());
         return "/view/home";
     }
 
     @GetMapping("/add")
-    public String add(Model model){
+    public String add(Model model) {
         model.addAttribute("item", new HouseDao());
         return "/view/registry";
     }
 
     @GetMapping("/delete/{id}")
-    public String hideDisplay(@PathVariable Integer id){
+    public String hideDisplay(@PathVariable Integer id) {
         service.hideDisplay(id);
         return "redirect:/";
     }
 
     @GetMapping("/edit/{id}")
-    public String update(@PathVariable Integer id, Model model){
+    public String update(@PathVariable Integer id, Model model) {
         model.addAttribute("item", service.findByIdDao(id));
         return "/view/registry";
     }
 
     @PostMapping("/registry")
-    public String registry(@ModelAttribute HouseDao houseDao, RedirectAttributes attributes){
+    public String registry(@ModelAttribute HouseDao houseDao, RedirectAttributes attributes) {
         service.save(houseDao);
-        attributes.addFlashAttribute("message","save successfully!");
+        attributes.addFlashAttribute("message", "save successfully!");
         return "redirect:/";
     }
-
-
-
 
 
 }

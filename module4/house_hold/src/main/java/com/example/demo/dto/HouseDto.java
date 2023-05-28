@@ -31,7 +31,7 @@ public class HouseDto {
 
     private String personInHouse;
 
-    public HouseDto(House house, Integer numPerson, String personInHouse){
+    public HouseDto(House house, Integer numPerson, String personInHouse) {
         id = house.getId();
         name = house.getName();
         date = house.getDate();
