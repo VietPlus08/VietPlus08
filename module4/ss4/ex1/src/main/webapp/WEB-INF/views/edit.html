@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit</title>
+</head>
+<body>
+<h1>Settings</h1>
+<form action="" th:action="@{/}" method="post" th:object="${mail}">
+    <table>
+        <tr>
+            <td>Languages</td>
+            <td>
+                <select th:field="*{language}">
+                    <option th:each="item: ${languages}"
+                            th:value="${item}"
+                            th:text="${item}">
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Pages</td>
+            <td>
+                <select th:field="*{page}">
+                    <option th:each="item: ${pages}"
+                            th:value="${item}"
+                            th:text="${item}">
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Spam filters</td>
+            <td>
+                <input type="radio" th:value="*{spam}">
+                <label th:text="*{spam}" for=""></label>
+            </td>
+        </tr>
+        <tr>
+            <td>Signature</td>
+            <td>
+                <input type="text" th:field="*{signature}">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button th:text="Update"></button>
+            </td>
+            <td>
+                <button th:text="Cancel"></button>
+            </td>
+        </tr>
+    </table>
+
+
+</form>
+
+</body>
+</html>
