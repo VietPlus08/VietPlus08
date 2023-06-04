@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<h1>Form declaration</h1>
+<h1 th:text="${mes}"></h1>
+
+<form th:action="@{/}" method="post" th:object="${declaration}">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td colspan="2">
+                <input type="text" th:field="*{name}">
+            </td>
+        </tr>
+        <tr>
+            <td>Year of birth</td>
+            <td>Gender</td>
+            <td>National</td>
+        </tr>
+        <tr>
+            <td>
+                <select th:field="*{yob}">
+                    <option
+                            th:each="item: ${year}"
+                            th:text="${item}"
+                            th:value="${item}"
+                            th:selected="${item == declaration.yob}"></option>
+                </select>
+            </td>
+            <td>
+                <select th:field="*{gender}">
+                <option th:text="Female"
+                        th:value="0"
+                        th:selected="${0 == declaration.gender}"></option>
+                <option th:text="Male"
+                        th:value="1"
+                        th:selected="${1 == declaration.gender}"></option>
+            </select>
+            </td>
+            <td>
+                <select th:field="*{national}">
+                    <option th:text="Vietnamese"
+                            th:value="0"
+                            th:selected="${0 == declaration.national}"></option>
+                    <option th:text="USA"
+                            th:value="1"
+                            th:selected="${1 == declaration.national}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>IdentityNumber</td>
+            <td colspan="2">
+                <input type="text" th:field="*{identityNumber}">
+            </td>
+        </tr>
+        <tr>
+            <td>Transport information</td>
+            <td th:each="v: ${vehicles}">
+                <input type="checkbox"
+                        th:field="*{vehicle}"
+                        th:value="${v.id}">
+                <label for="" th:text="${v.vehicle}"></label>
+            </td>
+        </tr>
+        <tr>
+            <td>Reservation</td>
+            <td colspan="2">
+                <input type="text" th:field="*{identityNumber}">
+            </td>
+        </tr>
+        <tr>
+            <td>Start date</td>
+            <td>
+                <input type="date" th:field="*{dateIn}">
+            </td>
+        </tr>
+        <tr>
+            <td>End date</td>
+            <td>
+                <input type="date" th:field="*{dateOut}">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><span>In last 14 days, where did you visited city/district?</span></td>
+        </tr>
+        <tr>
+            <td><span>City</span></td>
+            <td><span>District</span></td>
+            <td><span>Ward</span></td>
+        </tr>
+<!--        <tr>-->
+<!--            <td th:each="c: ${communications}">-->
+<!--                <select >-->
+<!--                    <option th:text="${c.city}"-->
+<!--                            th:value="${c.id}">-->
+
+<!--                    </option>-->
+<!--                </select>-->
+<!--            </td>-->
+<!--        </tr>-->
+        <tr>
+            <td>Phone number</td>
+            <td colspan="2">
+                <input type="text" th:field="*{number}">
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td colspan="2">
+                <input type="text" th:field="*{email}">
+            </td>
+        </tr>
+
+    </table>
+
+</form>
+
+<!--<table>-->
+<!--    <tr th:each="v: ${vehicles}" th:object="${vehicle}">-->
+<!--        <td>Vehicle: </td>-->
+<!--        <td><input type="checkbox" th:field="" ></td>-->
+<!--    </tr>-->
+
+<!--</table>-->
+
+
+</body>
+</html>
