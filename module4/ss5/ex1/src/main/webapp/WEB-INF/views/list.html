@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>upload</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Artist</th>
+        <th>Link</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each="s,loop : ${songs}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${s.name}"></td>
+        <td th:text="${s.artist}"></td>
+        <td>
+            <audio controls><source th:src="@{'/music/' + ${s.link}}" type="audio/wav">
+            </audio>
+        </td>
+        <td>
+            <a th:href="@{/update/{id}(id=*{s.id})}"><button type="submit">Update</button></a>
+            <a th:href="@{/delete}"><button type="submit">Delete</button></a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

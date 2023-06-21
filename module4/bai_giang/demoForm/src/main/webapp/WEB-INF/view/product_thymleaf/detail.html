@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail product</title>
+</head>
+<body>
+    <h1 th:text="#{title}">Detail product</h1>
+    <table th:object="${product}">
+        <tr>
+            <td>ID:</td>
+            <td th:text="*{id}"></td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td th:text="*{name}"></td>
+        </tr>
+        <tr>
+            <td>Category:</td>
+            <td th:text="${product.category.categoryName}"></td>
+        </tr>
+        <tr>
+            <td>Price:</td>
+            <td th:text="${#numbers.formatCurrency(product.price)}"></td>
+        </tr>
+        <tr>
+            <td>Quantity:</td>
+            <td th:text="${product.quantity}"></td>
+        </tr>
+        <tr>
+            <td>Date release:</td>
+            <td th:text="${#dates.format(product.dateRelease, 'dd/MM/yyyy')}"></td>
+        </tr>
+    </table>
+    <a th:text="|Back to list|" th:href="@{/product/list}"></a>
+</body>
+</html>

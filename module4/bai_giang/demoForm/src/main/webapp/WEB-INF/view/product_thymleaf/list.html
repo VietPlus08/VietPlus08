@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List product</title>
+</head>
+<body>
+    <form th:action="@{/product/search}" method="get" >
+        Name: <input type="text" name="name" th:value="${name != null ? name: ''}">
+       <input type="submit" value="Search">
+    </form>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>DateRelease</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+        <tr th:each="p: ${products}" th:object="${p}">
+            <td th:text="*{id}"></td>
+            <td th:text="*{name}"></td>
+            <td th:text="*{category.categoryName}"></td>
+            <td th:text="*{#numbers.formatCurrency(price)}"></td>
+            <td th:text="*{#dates.format(dateRelease, 'dd/MM/yyyy')}"></td>
+            <td th:text="*{quantity}"></td>
+            <td>
+                <a th:href="@{/product/detail/{id}(id=*{id})}">Detail</a>
+                <a th:href="@{/product/update(id=*{id})}">Update</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
