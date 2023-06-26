@@ -5,6 +5,7 @@ import com.codegym.blog.entity.Blog;
 import com.codegym.blog.entity.BlogDto;
 import com.codegym.blog.service.IBlogService;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,7 +39,8 @@ public class MainController {
         return "view/list";
     }
     @GetMapping("/page_list")
-    public String showListWithPage(@PageableDefault(value = 5) Pageable pageable, Model model){
+    public String showListWithPage(@PageableDefault(value = 3) Pageable pageable, Model model){
+        Sort sort = Sort.by("dateOfCreateComment").descending();
         model.addAttribute("blog", new BlogDto());
         model.addAttribute("blogs", service.findWithPage(pageable));
         return "view/list";
@@ -54,6 +56,13 @@ public class MainController {
     public String delete(@RequestParam("id") Integer id){
         service.delete(id);
         return "redirect:/";
+    }
+
+    @GetMapping("update/{id}")
+    public String update(@PathVariable("id") Integer id, Model model){
+
+        //model.addAttribute("blog",);
+        return "view/update";
     }
 
 
