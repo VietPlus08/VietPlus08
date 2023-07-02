@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Information Person</title>
+</head>
+<body>
+<h1>Person Infor</h1>
+<form th:action="@{/save}" method="post" th:object="${infor}">
+    <label for="name">Name: </label>
+    <input id="name" th:field="*{name}">
+    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+    <br>
+    <label for="identity">Identity number: </label>
+    <input id="identity" th:field="*{identityNumber}"><br>
+    <span th:if="${#fields.hasErrors('identityNumber')}" th:errors="*{identityNumber}"></span>
+    <label for="age">Age: </label>
+    <input id="age" th:field="*{age}"><br>
+    <span th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span>
+    <br>
+    <label for="job">Job: </label>
+    <select id="job" th:field="*{job}">
+        <option value="" >Choose the flowing option!</option>
+        <option th:each="item: ${jobs}"
+                th:value="${item.jobCode}"
+                th:text="${item.jobName}"
+                th:selected="${item.equals(infor.job)}" />
+    </select>
+    <br>
+    <label for="address">Address: </label>
+    <input id="address" th:field="*{address}"><br>
+    <button type="submit" >Submit</button>
+</form>
+</body>
+</html>

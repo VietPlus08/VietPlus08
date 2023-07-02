@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:if="${message}" >
+        <span th:text="${message}"></span>
+    </div>
+
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>identity</th>
+            <th>age</th>
+            <th>jobCode</th>
+            <th>address</th>
+        </tr>
+        <tr th:each="item,loop: ${infors}" th:object="${item}">
+            <td th:text="${loop.count}"></td>
+            <td th:text="*{name}"></td>
+            <td th:text="*{identityNumber}"></td>
+            <td th:text="*{age}"></td>
+            <td th:text="*{job.jobName}"></td>
+            <td th:text="*{address}"></td>
+        </tr>
+    </table>
+
+    <div th:if="${infors.totalPages > 0}" class="pagination"
+            th:each="pageNumber : ${pageNumbers}">
+        <a th:href="@{/(size = ${infors.size}, page = ${pageNumber})}"
+            th:text="${pageNumber}"
+            th:class="${pageNumber == infors.number + 1} ? active : ''"></a>
+
+    </div>
+</body>
+</html>
