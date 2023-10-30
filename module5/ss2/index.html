@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      h1 {
+        padding: 20px 20px;
+      }
+      .full-container {
+        width: 400px;
+        background-color: azure;
+      }
+      .product-img {
+        width: 100px;
+        height: 100px;
+      }
+      .ava-img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-left: 10px;
+      }
+      h4,
+      p {
+        margin: 5px 0px;
+        color: rgb(81, 0, 161);
+      }
+      ul {
+        padding-left: 0px;
+      }
+      li {
+        display: flex;
+        width: 100%;
+        border-top: 1px solid #111;
+        list-style-type: none;
+      }
+      .product-img-container {
+        flex: 3;
+      }
+      .product-content-container {
+        flex: 7;
+      }
+      .ava-container {
+        display: flex;
+      }
+      .ava-content {
+        margin: 8px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function List() {
+        const list = [
+          {
+            id: 1,
+            title: "Product 1",
+            description: "Product 1 is a book",
+            submitterAvatar: "images/avatars/ava1.png",
+            productImage: "images/products/product-ima1.png",
+          },
+          {
+            id: 2,
+            title: "Product 2",
+            description: "Product 2 is a phone",
+            submitterAvatar: "images/avatars/ava2.png",
+            productImage: "images/products/product-ima2.png",
+          },
+          {
+            id: 3,
+            title: "Product 3",
+            description: "Product 3 is sun eletric",
+            submitterAvatar: "images/avatars/ava3.png",
+            productImage: "images/products/product-ima3.png",
+          },
+          {
+            id: 4,
+            title: "Product 4",
+            description: "Product 4 is sugar",
+            submitterAvatar: "images/avatars/ava4.png",
+            productImage: "images/products/product-ima4.png",
+          },
+        ];
+        return (
+          <div className="full-container">
+            <h1>Product list</h1>
+            <ul>
+              {list.map((item) => (
+                <li>
+                  <div className="product-img-container">
+                    <img
+                      className="product-img"
+                      src={item.productImage}
+                      alt=""
+                    />
+                  </div>
+                  <div className="product-content-container">
+                    <h4>{item.title}</h4>
+                    <p>{item.description}</p>
+                    <div className="ava-container">
+                      <span className="ava-content">Submitted by: </span>
+                      <img
+                        className="ava-img"
+                        src={item.submitterAvatar}
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(<List />);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function List() {
+        const students = [
+          {
+            company: "Alfreds Futterkiste",
+            contact: "Maria Anders",
+            country: "Germany",
+          },
+          {
+            company: "Centro comercial Moctezuma",
+            contact: "Francisco Chang",
+            country: "Mexico",
+          },
+          {
+            company: "Ernst Handel",
+            contact: "Roland Mendel",
+            country: "Austria",
+          },
+          {
+            company: "Island Trading",
+            contact: "Helen Bennett",
+            country: "UK",
+          },
+          {
+            company: "Laughing Bacchus Winecellars",
+            contact: "Yoshi Tannamuri",
+            country: "Canada",
+          },
+          {
+            company: "Magazzini Alimentari Riuniti",
+            contact: "Giovanni Rovelli",
+            country: "Italy",
+          },
+        ];
+        const columnNames = Object.keys(students[0]);
+        return (
+          <table className="table-striped table-bordered">
+            <thead>
+              <tr>
+                {columnNames.map((columnName) => (
+                  <th key={columnName}>{columnName}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {students.map((student) => (
+                <tr key={student}>
+                  <td>{student.company}</td>
+                  <td>{student.contact}</td>
+                  <td>{student.company}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(<List />);
+    </script>
+  </body>
+</html>
