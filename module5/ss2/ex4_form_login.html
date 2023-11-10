@@ -69,7 +69,8 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
-      function List() {
+      const List = () => {
+        let text = "Cảnh báo! Tài nguyên bạn vừa truy cập không tồn tại";
         return (
           <div className="container d-flex align-items-center text-center">
             <div className="form-signin">
@@ -113,8 +114,7 @@
             </div>
           </div>
         );
-      }
-
+      };
       ReactDOM.createRoot(document.getElementById("root")).render(<List />);
     </script>
   </body>
